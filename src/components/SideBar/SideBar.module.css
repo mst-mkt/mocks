@@ -1,0 +1,41 @@
+.container {
+  grid-area: side;
+  padding: 12px;
+  color: #fff;
+  background-color: #222;
+  border: 1px solid #2a2a2a;
+  border-radius: 16px;
+}
+
+.children {
+  position: relative;
+  padding-left: 24px;
+}
+
+.children::before {
+  position: absolute;
+  top: 8px;
+  left: 15px;
+  width: 1px;
+  height: calc(100% - 8px);
+  content: '';
+  background-color: #333;
+}
+
+.file {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 8px;
+  transition: background-color 0.1s ease-in-out;
+}
+
+.file > p {
+  margin: 0;
+}
+
+.file:hover {
+  background-color: #333;
+}
