@@ -8,7 +8,7 @@ export const Note = () => {
   const [code, setCode] = useState('');
 
   useEffect(() => {
-    fetch('/example/example.py').then((res) => {
+    fetch('./example/example.py').then((res) => {
       res.text().then((text) => {
         setCode(text);
       });
