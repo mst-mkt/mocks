@@ -1,20 +1,13 @@
 import { Editor } from '@monaco-editor/react';
-import { useEffect, useState } from 'react';
 import { StatusBar } from '../StatusBar/StatusBar';
 import { TabBar } from '../TabBar/TabBar';
 import styles from './Note.module.css';
 
-export const Note = () => {
-  const [code, setCode] = useState('');
+type Props = {
+  code: string;
+};
 
-  useEffect(() => {
-    fetch('./example/example.py').then((res) => {
-      res.text().then((text) => {
-        setCode(text);
-      });
-    });
-  }, []);
-
+export const Note = ({ code }: Props) => {
   return (
     <div className={styles.container}>
       <TabBar />
