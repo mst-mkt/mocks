@@ -1,0 +1,85 @@
+.container {
+  display: grid;
+  grid-template:
+    'avatar name  name' 36px
+    'main   main  main' auto
+    'likes  likes time' 24px / 36px 1fr auto;
+  gap: 16px;
+  padding: 24px;
+  background-color: #1e1e1e;
+  border-radius: 16px;
+}
+
+.container > header,
+.container > main,
+.container > footer {
+  display: contents;
+}
+
+.avatar {
+  grid-area: avatar;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.avatar > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.name {
+  grid-area: name;
+  margin: 0;
+  font-weight: bold;
+  line-height: 36px;
+  color: #dfdfdf;
+}
+
+.main {
+  grid-area: main;
+  padding: 8px;
+  margin: 0;
+  color: #dfdfdf;
+  white-space: pre-wrap;
+  background-color: #0f0f0f;
+  border: 1px #141414 solid;
+  border-radius: 8px;
+}
+
+.likeButton {
+  display: flex;
+  grid-area: likes;
+  gap: 4px;
+  align-items: center;
+  width: fit-content;
+  padding: 4px 8px;
+  color: #dfdfdf;
+  cursor: pointer;
+  background-color: #0000;
+  border: 0;
+  border-radius: 4px;
+}
+
+.likeButton:hover {
+  background-color: #0003;
+}
+
+.likeButton > p {
+  margin: 0;
+  line-height: 24px;
+}
+
+.sharedAt {
+  grid-area: time;
+  margin: 0;
+  font-size: 12px;
+  line-height: 24px;
+  color: #cacaca;
+}
+
+.sharedAt > p {
+  margin: 0;
+}
