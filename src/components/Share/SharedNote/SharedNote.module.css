@@ -38,14 +38,14 @@
   color: #dfdfdf;
 }
 
-.main {
+.main > pre {
   grid-area: main;
   padding: 8px;
   margin: 0;
+  font-size: 12px;
   color: #dfdfdf;
   white-space: pre-wrap;
   background-color: #0f0f0f;
-  border: 1px #141414 solid;
   border-radius: 8px;
 }
 
