@@ -90,7 +90,7 @@ const subjects: Directory[] = [
         isOpend: true,
         files: [
           {
-            name: '第一回議事録.docs',
+            name: '第一回議事録.docx',
             icon: IconNotebook,
           },
           {
