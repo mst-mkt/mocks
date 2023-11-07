@@ -15,3 +15,39 @@
   background-color: #1e1e1e;
   border-top-right-radius: 16px;
 }
+
+.note {
+  padding: 16px 32px;
+  color: #ccc;
+  background-color: #1e1e1e;
+  border-top-right-radius: 16px;
+}
+
+.note > ul:last-child > li:last-child::after {
+  display: inline-block;
+  width: 2px;
+  height: 1.2em;
+  margin-left: 2px;
+  vertical-align: bottom;
+  content: '';
+  background-color: #fff;
+  animation: blink 1.6s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  51% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

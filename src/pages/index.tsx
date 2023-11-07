@@ -7,6 +7,7 @@ import styles from './index.module.css';
 
 const Home = () => {
   const [page, setPage] = useState(0);
+  const [tab, setTab] = useState<1 | 2>(1);
   const [code, setCode] = useState('');
 
   useEffect(() => {
@@ -21,7 +22,7 @@ const Home = () => {
     <div className={styles.container}>
       <NavBar page={page} changePage={setPage} />
       <SideBar />
-      {page === 0 && <Note code={code} />}
+      {page === 0 && <Note code={code} activeTab={tab} setTab={setTab} />}
       {page === 3 && <Share />}
     </div>
   );

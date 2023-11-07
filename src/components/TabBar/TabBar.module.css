@@ -12,14 +12,22 @@
   height: 100%;
   padding: 8px 12px;
   color: #bbb;
-  background-color: #1e1e1e;
+  cursor: pointer;
+  background-color: #252525;
   border-radius: 12px 12px 0 0;
+}
+
+.tab.active {
+  color: #fff;
+  cursor: default;
+  background-color: #1e1e1e;
 }
 
 .tab::before {
   position: absolute;
   right: -9px;
   bottom: 0;
+  z-index: 1;
   width: 9px;
   height: 9px;
   content: '';
@@ -30,11 +38,32 @@
   position: absolute;
   right: -18px;
   bottom: 0;
+  z-index: 2;
   width: 18px;
   height: 18px;
+  clip-path: polygon(0 50%, 50% 50%, 50% 100%, 0 100%);
   content: '';
   background-color: #333;
   border-radius: 9px;
+}
+
+.tab.active::before {
+  background-color: #1e1e1e;
+}
+
+.tab:not(.tab.active):first-child::before {
+  right: 0;
+  background-color: #1e1e1e;
+}
+
+.tab:not(.active):first-child::after {
+  right: 0;
+  clip-path: polygon(50% 50%, 100% 50%, 100% 100%, 50% 100%);
+  background-color: #252525;
+}
+
+.tab.active:first-child::after {
+  background-color: #252525;
 }
 
 .tab > p {
