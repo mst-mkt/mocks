@@ -4,5 +4,12 @@
   "files": {
     "include": ["./src/**/*"],
     "ignore": ["./src/**/*.d.ts", "./src/**/*.gen.ts"]
+  },
+  "linter": {
+    "rules": {
+      "suspicious": {
+        "noArrayIndexKey": "off"
+      }
+    }
   }
 }
