@@ -25,9 +25,11 @@ const Home = () => (
   <>
     <Head title="Home" description={`Top Page of ${PROJECT_NAME}`} />
     <div className="flex flex-col gap-y-4">
-      <div className="flex aspect-[16/9] items-center justify-center rounded-2xl bg-green-500/16 text-lg">
-        いい感じの地図
-        <br /> (バスのリアルタイム位置情報付き)
+      <div className="flex aspect-[16/9] items-center justify-center overflow-hidden rounded-2xl text-lg">
+        <img
+          src="https://cdn.discordapp.com/attachments/1092840828784889938/1326402922078011452/23_20250108131119.png?ex=677f4c7b&is=677dfafb&hm=99e582eead6667262c2a7a80ea657b6a57c259c4048f4b9fc881f419dea59cfa&"
+          alt=""
+        />
       </div>
       <div className="flex flex-col gap-y-2">
         {/* 遅延情報 */}
